@@ -10,4 +10,5 @@ public class HotelModel implements BusinessModel {
 	String hotelUrl;
 	String rating;
 	String currency;
+	String minPrice;
 }

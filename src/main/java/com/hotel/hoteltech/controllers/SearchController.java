@@ -33,8 +33,7 @@ public class SearchController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return model;
-
+		return model; 
 	}
 
 }

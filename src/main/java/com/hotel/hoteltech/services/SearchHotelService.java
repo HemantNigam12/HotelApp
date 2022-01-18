@@ -38,8 +38,9 @@ public class SearchHotelService {
 				builder.append(output + "\n");
 			}
 			JSONObject json = new JSONObject(builder.toString());
+			System.out.println("json--"+json);
 			JSONObject curObj = (JSONObject) json.get("data");
-			System.out.println(curObj.get("hotels"));
+			//System.out.println(curObj.get("hotels"));
 			JSONArray array = curObj.getJSONArray("hotels");
 			for (int i = 0; i < array.length(); i++) {
 				HotelModel data = new HotelModel();
@@ -47,6 +48,7 @@ public class SearchHotelService {
 				data.setHotelUrl(array.getJSONObject(i).getString("url"));
 				data.setRating(String.valueOf(array.getJSONObject(i).getInt("rating")));
 				data.setCurrency(array.getJSONObject(i).getString("currency"));
+				data.setMinPrice(String.valueOf(array.getJSONObject(i).getFloat("minprice")));
 				hotelList.add(data);
 			}
 			System.out.println("hotelList--" + hotelList);

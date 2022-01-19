@@ -48,7 +48,7 @@ th {
 						success : function(data) {
 							if (!$.trim(data)){   
 								 $("#hotels").hide();
-							    alert("Failed");
+							    alert("Network Error");
 							}
 							else{ 
 								 $("#hotels").show();
@@ -56,7 +56,7 @@ th {
 							}
 						},
 						error : function(data) {
-							 alert("Failed");
+							 alert("Network Error");
 						}
 					});
 					}
